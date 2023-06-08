@@ -1,0 +1,1173 @@
+2023-06-04 12:06:58.7707 Info User profile is available. Using 'C:\Users\NaveenaThangavel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-04 12:08:01.5758 Info Now listening on: https://localhost:7279
+2023-06-04 12:08:01.5758 Info Now listening on: http://localhost:5161
+2023-06-04 12:08:01.5995 Info Application started. Press Ctrl+C to shut down.
+2023-06-04 12:08:01.6086 Info Hosting environment: Development
+2023-06-04 12:08:01.6086 Info Content root path: C:\Users\NaveenaThangavel\Desktop\Task\Assignment-Security-Concepts\SecureApplication
+2023-06-04 12:08:02.2565 Info Request starting HTTP/2 GET https://localhost:7279/ - -
+2023-06-04 12:08:02.5148 Info Request finished HTTP/2 GET https://localhost:7279/ - - - 404 0 - 262.1426ms
+2023-06-04 12:08:08.9605 Info Request starting HTTP/1.1 POST http://localhost:5161/api/user/login application/json 61
+2023-06-04 12:08:08.9826 Info Request finished HTTP/1.1 POST http://localhost:5161/api/user/login application/json 61 - 307 0 - 22.1455ms
+2023-06-04 12:08:09.0077 Info Request starting HTTP/1.1 POST https://localhost:7279/api/user/login application/json 61
+2023-06-04 12:08:09.0118 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 12:08:09.0420 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 12:08:09.6420 Info Attempting login for email: Abi@example.com
+2023-06-04 12:08:10.4227 Warn No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-06-04 12:08:12.6904 Info Executed DbCommand (218ms) [Parameters=[@__login_Email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[DateCreated], [u].[DateOfBirth], [u].[DateUpdated], [u].[Email], [u].[Gender], [u].[IsActive], [u].[Password], [u].[PasswordSalt], [u].[Phone], [u].[Role], [u].[UserName]
+FROM [User] AS [u]
+WHERE [u].[Email] = @__login_Email_0
+2023-06-04 12:08:12.7499 Error Invalid user credentials,Given Password is incorrect
+2023-06-04 12:08:26.7832 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 17737.1668ms
+2023-06-04 12:08:26.8006 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 12:08:31.4198 Error UnauthorizedException occurred: Given password is incorrect
+2023-06-04 12:08:34.3236 Info Request finished HTTP/1.1 POST https://localhost:7279/api/user/login application/json 61 - 401 - application/json 25315.9129ms
+2023-06-04 12:08:59.7323 Info Request starting HTTP/1.1 POST http://localhost:5161/api/user/login application/json 61
+2023-06-04 12:08:59.7323 Info Request finished HTTP/1.1 POST http://localhost:5161/api/user/login application/json 61 - 307 0 - 0.5272ms
+2023-06-04 12:08:59.7323 Info Request starting HTTP/1.1 POST https://localhost:7279/api/user/login application/json 61
+2023-06-04 12:08:59.7323 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 12:08:59.7323 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 12:08:59.7534 Info Attempting login for email: Abi@example.com
+2023-06-04 12:08:59.8538 Info Executed DbCommand (53ms) [Parameters=[@__login_Email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[DateCreated], [u].[DateOfBirth], [u].[DateUpdated], [u].[Email], [u].[Gender], [u].[IsActive], [u].[Password], [u].[PasswordSalt], [u].[Phone], [u].[Role], [u].[UserName]
+FROM [User] AS [u]
+WHERE [u].[Email] = @__login_Email_0
+2023-06-04 12:09:00.0724 Info JWT token generated for user with email: Abi@example.com
+2023-06-04 12:09:00.0786 Info Login Sucessfull for the user : Abi@example.com
+2023-06-04 12:09:00.0786 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 12:09:00.1250 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 382.6792ms
+2023-06-04 12:09:00.1250 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 12:09:00.1250 Info Request finished HTTP/1.1 POST https://localhost:7279/api/user/login application/json 61 - 200 - application/json;+charset=utf-8 385.9087ms
+2023-06-04 12:09:27.5454 Info Request starting HTTP/1.1 POST https://localhost:7279/api/book application/json 365
+2023-06-04 12:09:34.7078 Info Executing endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 12:09:34.7078 Info Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBook(Entities.Dtos.RequestDto.BookDto) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 12:09:57.6320 Info Executed action SecureApplication.Controllers.BookController.CreateBook (SecureApplication) in 22921.6266ms
+2023-06-04 12:09:57.6368 Info Executed endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 12:55:34.0020 Info User profile is available. Using 'C:\Users\NaveenaThangavel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-04 12:56:01.5325 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 12:56:01.5650 Warn Failed to determine the https port for redirect.
+2023-06-04 12:56:01.6410 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 12:56:01.6680 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 12:56:01.8483 Info Attempting login for email: navee@example.com
+2023-06-04 12:56:02.2945 Info JWT token generated for user with email: navee@example.com
+2023-06-04 12:56:02.2945 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 12:56:02.2945 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 12:56:02.3539 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 680.8738ms
+2023-06-04 12:56:02.3539 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 12:56:02.3613 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 833.2963ms
+2023-06-04 12:56:07.7019 Info Request starting HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 341
+2023-06-04 12:56:07.8308 Info Executing endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 12:56:07.8308 Info Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBook(Entities.Dtos.RequestDto.BookDto) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 12:57:00.7213 Info Executed action SecureApplication.Controllers.BookController.CreateBook (SecureApplication) in 52889.3721ms
+2023-06-04 12:57:00.7361 Info Executed endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 12:57:03.4959 Error BadRequestException occurred: Title is required
+2023-06-04 12:57:03.5378 Info Request finished HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 341 - 400 - application/json 55835.9161ms
+2023-06-04 12:57:47.3702 Info User profile is available. Using 'C:\Users\NaveenaThangavel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-04 12:57:48.0254 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 12:57:48.0373 Warn Failed to determine the https port for redirect.
+2023-06-04 12:57:48.0775 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 12:57:48.0918 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 12:57:48.2018 Info Attempting login for email: navee@example.com
+2023-06-04 12:57:48.4188 Info JWT token generated for user with email: navee@example.com
+2023-06-04 12:57:48.4188 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 12:57:48.4188 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 12:57:48.4487 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 354.6458ms
+2023-06-04 12:57:48.4487 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 12:57:48.4487 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 428.0544ms
+2023-06-04 12:57:48.4487 Info Request starting HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 346
+2023-06-04 12:57:48.5172 Info Executing endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 12:57:48.5172 Info Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBook(Entities.Dtos.RequestDto.BookDto) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 12:57:48.5612 Error A book with the same ISBN number already exists. ISBN: 978-167883456780
+2023-06-04 12:57:48.5612 Info Executed action SecureApplication.Controllers.BookController.CreateBook (SecureApplication) in 43.5765ms
+2023-06-04 12:57:48.5612 Info Executed endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 12:57:48.5804 Error ConflictException occurred: A book with the same ISBN number already exists.
+2023-06-04 12:57:48.5804 Info Request finished HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 346 - 409 - application/json 120.1076ms
+2023-06-04 12:57:56.0929 Info User profile is available. Using 'C:\Users\NaveenaThangavel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-04 12:58:16.4308 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 12:58:16.4656 Warn Failed to determine the https port for redirect.
+2023-06-04 12:58:16.5338 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 12:58:16.5558 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 12:58:16.7360 Info Attempting login for email: navee@example.com
+2023-06-04 12:58:17.1543 Info JWT token generated for user with email: navee@example.com
+2023-06-04 12:58:17.1543 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 12:58:17.1796 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 12:58:17.2230 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 663.1568ms
+2023-06-04 12:58:17.2230 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 12:58:17.2230 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 802.2989ms
+2023-06-04 12:58:21.7117 Info Request starting HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 346
+2023-06-04 12:58:21.8526 Info Executing endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 12:58:21.8526 Info Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBook(Entities.Dtos.RequestDto.BookDto) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 12:58:25.4895 Error A book with the same ISBN number already exists. ISBN: 978-167883456780
+2023-06-04 12:58:31.4685 Info Executed action SecureApplication.Controllers.BookController.CreateBook (SecureApplication) in 9614.4042ms
+2023-06-04 12:58:31.4685 Info Executed endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 12:59:03.4411 Info User profile is available. Using 'C:\Users\NaveenaThangavel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-04 12:59:04.0898 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 12:59:04.0898 Warn Failed to determine the https port for redirect.
+2023-06-04 12:59:04.1446 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 12:59:04.1606 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 12:59:04.2823 Info Attempting login for email: navee@example.com
+2023-06-04 12:59:04.4935 Info JWT token generated for user with email: navee@example.com
+2023-06-04 12:59:04.4935 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 12:59:04.4935 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 12:59:04.5194 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 356.5621ms
+2023-06-04 12:59:04.5194 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 12:59:04.5194 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 434.3124ms
+2023-06-04 12:59:04.5329 Info Request starting HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 346
+2023-06-04 12:59:04.5856 Info Executing endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 12:59:04.5856 Info Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBook(Entities.Dtos.RequestDto.BookDto) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 12:59:04.6500 Info Book created successfully with ISBN: 978-167883496780
+2023-06-04 12:59:04.6500 Info Book Created Sucessfully
+2023-06-04 12:59:04.6500 Info Executing StatusCodeResult, setting HTTP status code 201
+2023-06-04 12:59:04.6500 Info Executed action SecureApplication.Controllers.BookController.CreateBook (SecureApplication) in 67.3605ms
+2023-06-04 12:59:04.6500 Info Executed endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 12:59:04.6500 Info Request finished HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 346 - 201 - - 121.5270ms
+2023-06-04 12:59:21.1206 Info User profile is available. Using 'C:\Users\NaveenaThangavel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-04 12:59:47.8179 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 12:59:47.8484 Warn Failed to determine the https port for redirect.
+2023-06-04 12:59:47.9149 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 12:59:47.9389 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 12:59:48.1186 Info Attempting login for email: navee@example.com
+2023-06-04 12:59:48.5392 Info JWT token generated for user with email: navee@example.com
+2023-06-04 12:59:48.5589 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 12:59:48.5589 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 12:59:48.6108 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 666.7398ms
+2023-06-04 12:59:48.6108 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 12:59:48.6108 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 803.3065ms
+2023-06-04 13:00:03.0232 Info Request starting HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 346
+2023-06-04 13:00:03.1548 Info Executing endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:00:03.1548 Info Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBook(Entities.Dtos.RequestDto.BookDto) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:00:41.6795 Info Book created successfully with ISBN: 978-167883496780
+2023-06-04 13:00:41.6841 Info Book Created Sucessfully
+2023-06-04 13:00:41.6841 Info Executing StatusCodeResult, setting HTTP status code 201
+2023-06-04 13:00:41.6841 Info Executed action SecureApplication.Controllers.BookController.CreateBook (SecureApplication) in 38531.7763ms
+2023-06-04 13:00:41.6841 Info Executed endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:00:41.6841 Info Request finished HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 346 - 201 - - 38664.8697ms
+2023-06-04 13:01:53.3972 Info User profile is available. Using 'C:\Users\NaveenaThangavel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-04 13:02:30.2836 Info Request starting HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 161
+2023-06-04 13:02:30.3132 Warn Failed to determine the https port for redirect.
+2023-06-04 13:02:30.3759 Info Executing endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:02:30.4001 Info Route matched with {action = "CreateUserAccount", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateUserAccount(Entities.Dtos.RequestDto.UserDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:02:30.6504 Warn Model validation failed while creating user account
+2023-06-04 13:02:33.0428 Info Executed action SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication) in 2637.3238ms
+2023-06-04 13:02:33.0833 Info Executed endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:02:35.7524 Error BadRequestException occurred: Invalid Date of Birth.
+2023-06-04 13:02:35.7786 Info Request finished HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 161 - 400 - application/json 5499.5053ms
+2023-06-04 13:03:15.0286 Info User profile is available. Using 'C:\Users\NaveenaThangavel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-04 13:03:15.0286 Info User profile is available. Using 'C:\Users\NaveenaThangavel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-04 13:03:15.7079 Info Request starting HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 162
+2023-06-04 13:03:15.7079 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:03:15.7252 Warn Failed to determine the https port for redirect.
+2023-06-04 13:03:15.7252 Warn Failed to determine the https port for redirect.
+2023-06-04 13:03:15.7738 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:15.7738 Info Executing endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:03:15.7908 Info Route matched with {action = "CreateUserAccount", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateUserAccount(Entities.Dtos.RequestDto.UserDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:03:15.7908 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:03:15.9362 Info Attempting login for email: navee@example.com
+2023-06-04 13:03:15.9362 Info Creating a new user with email: test@example.com
+2023-06-04 13:03:16.0707 Info User created successfully with email: test@example.com
+2023-06-04 13:03:16.0737 Info Executing StatusCodeResult, setting HTTP status code 201
+2023-06-04 13:03:16.0737 Info Executed action SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication) in 284.0922ms
+2023-06-04 13:03:16.0737 Info Executed endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:03:16.0737 Info Request finished HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 162 - 201 - - 380.3086ms
+2023-06-04 13:03:16.0915 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 54
+2023-06-04 13:03:16.0915 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.0915 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:03:16.0915 Info Attempting login for email: test@example.com
+2023-06-04 13:03:16.1369 Info JWT token generated for user with email: test@example.com
+2023-06-04 13:03:16.1369 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:03:16.1380 Info Login Sucessfull for the user : test@example.com
+2023-06-04 13:03:16.1380 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:03:16.1380 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:03:16.1380 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:03:16.1595 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 66.2063ms
+2023-06-04 13:03:16.1595 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 368.5229ms
+2023-06-04 13:03:16.1595 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.1595 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.1595 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 54 - 200 - application/json;+charset=utf-8 68.2572ms
+2023-06-04 13:03:16.1595 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 449.3439ms
+2023-06-04 13:03:16.1595 Info Request starting HTTP/1.1 DELETE http://localhost/api/book/0B5851A4-02CA-4370-8D1B-130C36D369CA - -
+2023-06-04 13:03:16.1595 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:03:16.1681 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.1681 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:03:16.1681 Info Attempting login for email: navee@example.com
+2023-06-04 13:03:16.1681 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:03:16.1681 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:03:16.1681 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:03:16.1681 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 5.3454ms
+2023-06-04 13:03:16.1681 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.1681 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 8.6342ms
+2023-06-04 13:03:16.1681 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:03:16.1681 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.1681 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:03:16.1681 Warn Model validation failed while logging in.
+2023-06-04 13:03:16.1681 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 6.6711ms
+2023-06-04 13:03:16.1681 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.2051 Error BadRequestException occurred: Enter a valid email address
+2023-06-04 13:03:16.2051 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 400 - application/json 35.7942ms
+2023-06-04 13:03:16.2051 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49
+2023-06-04 13:03:16.2051 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.2051 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:03:16.2051 Info Attempting login for email: Abi@example.com
+2023-06-04 13:03:16.2051 Info JWT token generated for user with email: Abi@example.com
+2023-06-04 13:03:16.2051 Info Login Sucessfull for the user : Abi@example.com
+2023-06-04 13:03:16.2051 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:03:16.2051 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 1.2181ms
+2023-06-04 13:03:16.2051 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.2051 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49 - 200 - application/json;+charset=utf-8 1.6868ms
+2023-06-04 13:03:16.2140 Info Request starting HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 163
+2023-06-04 13:03:16.2140 Info Executing endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:03:16.2140 Info Route matched with {action = "CreateUserAccount", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateUserAccount(Entities.Dtos.RequestDto.UserDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:03:16.2140 Info Creating a new user with email: navee@example.com
+2023-06-04 13:03:16.2140 Error Failed to create user account due to conflict for email: navee@example.com
+2023-06-04 13:03:16.2140 Info Executed action SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication) in 1.5021ms
+2023-06-04 13:03:16.2140 Info Executed endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:03:16.2140 Error ConflictException occurred: User with Email or Phone already exists
+2023-06-04 13:03:16.2140 Info Request finished HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 163 - 409 - application/json 3.7241ms
+2023-06-04 13:03:16.2140 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 55
+2023-06-04 13:03:16.2140 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.2140 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:03:16.2140 Info Attempting login for email: navee@example.com
+2023-06-04 13:03:16.2140 Error Invalid user credentials,Given Password is incorrect
+2023-06-04 13:03:16.2140 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 1.079ms
+2023-06-04 13:03:16.2140 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.2140 Error UnauthorizedException occurred: Given password is incorrect
+2023-06-04 13:03:16.2140 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 55 - 401 - application/json 3.5169ms
+2023-06-04 13:03:16.2140 Info Request starting HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 161
+2023-06-04 13:03:16.2140 Info Executing endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:03:16.2140 Info Route matched with {action = "CreateUserAccount", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateUserAccount(Entities.Dtos.RequestDto.UserDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:03:16.2140 Warn Model validation failed while creating user account
+2023-06-04 13:03:16.2140 Info Executed action SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication) in 0.9445ms
+2023-06-04 13:03:16.2140 Info Executed endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:03:16.2140 Error BadRequestException occurred: Invalid Date of Birth.
+2023-06-04 13:03:16.2299 Info Request finished HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 161 - 400 - application/json 3.3222ms
+2023-06-04 13:03:16.2299 Info Executing endpoint 'SecureApplication.Controllers.BookController.DeleteBook (SecureApplication)'
+2023-06-04 13:03:16.2299 Info Route matched with {action = "DeleteBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteBook(System.Guid) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:03:16.2551 Info Executed action SecureApplication.Controllers.BookController.DeleteBook (SecureApplication) in 16.7278ms
+2023-06-04 13:03:16.2551 Info Executed endpoint 'SecureApplication.Controllers.BookController.DeleteBook (SecureApplication)'
+2023-06-04 13:03:16.2551 Error An error  occurred: The instance of entity type 'Book' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+2023-06-04 13:03:16.2551 Info Request finished HTTP/1.1 DELETE http://localhost/api/book/0B5851A4-02CA-4370-8D1B-130C36D369CA - - - 500 - application/json 95.8426ms
+2023-06-04 13:03:16.2551 Info Request starting HTTP/1.1 GET http://localhost/api/book - -
+2023-06-04 13:03:16.2731 Info Executing endpoint 'SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication)'
+2023-06-04 13:03:16.2731 Info Route matched with {action = "GetAllBooks", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks(Int32, Int32, System.String) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:03:16.2991 Info Retrieved 1 books from the collection
+2023-06-04 13:03:16.2991 Info Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Entities.Dtos.ResponseDto.AdminDto, SecureApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-04 13:03:16.3281 Info Executed action SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication) in 53.3104ms
+2023-06-04 13:03:16.3281 Info Executed endpoint 'SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication)'
+2023-06-04 13:03:16.3281 Info Request finished HTTP/1.1 GET http://localhost/api/book - - - 200 - application/json;+charset=utf-8 69.9684ms
+2023-06-04 13:03:16.3281 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49
+2023-06-04 13:03:16.3281 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.3281 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:03:16.3281 Info Attempting login for email: Abi@example.com
+2023-06-04 13:03:16.3281 Info JWT token generated for user with email: Abi@example.com
+2023-06-04 13:03:16.3281 Info Login Sucessfull for the user : Abi@example.com
+2023-06-04 13:03:16.3281 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:03:16.3281 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 0.8799ms
+2023-06-04 13:03:16.3281 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.3281 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49 - 200 - application/json;+charset=utf-8 1.1818ms
+2023-06-04 13:03:16.3461 Info Request starting HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 359
+2023-06-04 13:03:16.3461 Info Executing endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:03:16.3461 Info Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBook(Entities.Dtos.RequestDto.BookDto) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:03:16.3461 Info Executed action SecureApplication.Controllers.BookController.CreateBook (SecureApplication) in 0.19ms
+2023-06-04 13:03:16.3461 Info Executed endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:03:16.3461 Error Unauthorized access: Access denied
+2023-06-04 13:03:16.3461 Info Request finished HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 359 - 403 - application/json 3.6989ms
+2023-06-04 13:03:16.3461 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:03:16.3461 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.3461 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:03:16.3461 Info Attempting login for email: navee@example.com
+2023-06-04 13:03:16.3461 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:03:16.3461 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:03:16.3461 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:03:16.3461 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 2.2155ms
+2023-06-04 13:03:16.3461 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.3461 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 2.4610ms
+2023-06-04 13:03:16.3461 Info Request starting HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 341
+2023-06-04 13:03:16.3461 Info Executing endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:03:16.3461 Info Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBook(Entities.Dtos.RequestDto.BookDto) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:03:16.3641 Info Executed action SecureApplication.Controllers.BookController.CreateBook (SecureApplication) in 10.3662ms
+2023-06-04 13:03:16.3641 Info Executed endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:03:16.3641 Error BadRequestException occurred: Title is required
+2023-06-04 13:03:16.3641 Info Request finished HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 341 - 400 - application/json 12.6659ms
+2023-06-04 13:03:16.3641 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:03:16.3641 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.3641 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:03:16.3641 Info Attempting login for email: navee@example.com
+2023-06-04 13:03:16.3641 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:03:16.3641 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:03:16.3641 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:03:16.3641 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 0.7258ms
+2023-06-04 13:03:16.3641 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.3641 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 1.0714ms
+2023-06-04 13:03:16.3641 Info Request starting HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 359
+2023-06-04 13:03:16.3641 Info Executing endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:03:16.3641 Info Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBook(Entities.Dtos.RequestDto.BookDto) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:03:16.3779 Info Book created successfully with ISBN: 978-167883456700
+2023-06-04 13:03:16.3779 Info Book Created Sucessfully
+2023-06-04 13:03:16.3779 Info Executing StatusCodeResult, setting HTTP status code 201
+2023-06-04 13:03:16.3779 Info Executed action SecureApplication.Controllers.BookController.CreateBook (SecureApplication) in 9.5047ms
+2023-06-04 13:03:16.3779 Info Executed endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:03:16.3779 Info Request finished HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 359 - 201 - - 9.9279ms
+2023-06-04 13:03:16.3779 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:03:16.3779 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.3779 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:03:16.3779 Info Attempting login for email: navee@example.com
+2023-06-04 13:03:16.3779 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:03:16.3779 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:03:16.3779 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:03:16.3779 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 0.6834ms
+2023-06-04 13:03:16.3779 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.3779 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 0.9324ms
+2023-06-04 13:03:16.3779 Info Request starting HTTP/1.1 GET http://localhost/api/book/0B5851A4-02CA-4370-8D1B-130C36D369CA - -
+2023-06-04 13:03:16.3779 Info Executing endpoint 'SecureApplication.Controllers.BookController.GetBookById (SecureApplication)'
+2023-06-04 13:03:16.3779 Info Route matched with {action = "GetBookById", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookById(System.Guid) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:03:16.3779 Error No book found with ID: 0b5851a4-02ca-4370-8d1b-130c36d369ca
+2023-06-04 13:03:16.3779 Info Executed action SecureApplication.Controllers.BookController.GetBookById (SecureApplication) in 2.868ms
+2023-06-04 13:03:16.3779 Info Executed endpoint 'SecureApplication.Controllers.BookController.GetBookById (SecureApplication)'
+2023-06-04 13:03:16.3779 Error NotFoundException occurred: Book with ID 0b5851a4-02ca-4370-8d1b-130c36d369ca not found
+2023-06-04 13:03:16.3779 Info Request finished HTTP/1.1 GET http://localhost/api/book/0B5851A4-02CA-4370-8D1B-130C36D369CA - - - 404 - application/json 5.8663ms
+2023-06-04 13:03:16.3876 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49
+2023-06-04 13:03:16.3876 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.3876 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:03:16.3876 Info Attempting login for email: Abi@example.com
+2023-06-04 13:03:16.3876 Info JWT token generated for user with email: Abi@example.com
+2023-06-04 13:03:16.3876 Info Login Sucessfull for the user : Abi@example.com
+2023-06-04 13:03:16.3876 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:03:16.3876 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 1.3416ms
+2023-06-04 13:03:16.3876 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.3876 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49 - 200 - application/json;+charset=utf-8 1.7174ms
+2023-06-04 13:03:16.3876 Info Request starting HTTP/1.1 DELETE http://localhost/api/book/0B5851A4-02CA-4370-8D1G-130C36D369CA - -
+2023-06-04 13:03:16.3876 Info Executing endpoint 'SecureApplication.Controllers.BookController.DeleteBook (SecureApplication)'
+2023-06-04 13:03:16.3876 Info Route matched with {action = "DeleteBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteBook(System.Guid) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:03:16.3876 Info Executed action SecureApplication.Controllers.BookController.DeleteBook (SecureApplication) in 0.1906ms
+2023-06-04 13:03:16.3876 Info Executed endpoint 'SecureApplication.Controllers.BookController.DeleteBook (SecureApplication)'
+2023-06-04 13:03:16.3876 Error Unauthorized access: Access denied
+2023-06-04 13:03:16.3876 Info Request finished HTTP/1.1 DELETE http://localhost/api/book/0B5851A4-02CA-4370-8D1G-130C36D369CA - - - 403 - application/json 3.3213ms
+2023-06-04 13:03:16.3876 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:03:16.3876 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.3876 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:03:16.3876 Info Attempting login for email: navee@example.com
+2023-06-04 13:03:16.3876 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:03:16.3876 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:03:16.3876 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:03:16.3876 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 1.0234ms
+2023-06-04 13:03:16.3876 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.3876 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 1.3903ms
+2023-06-04 13:03:16.3876 Info Request starting HTTP/1.1 DELETE http://localhost/api/book/0B5851A4-02CA-4370-8D1G-130C36D369CA - -
+2023-06-04 13:03:16.3876 Info Executing endpoint 'SecureApplication.Controllers.BookController.DeleteBook (SecureApplication)'
+2023-06-04 13:03:16.3876 Info Route matched with {action = "DeleteBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteBook(System.Guid) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:03:16.3876 Error Book with ID 00000000-0000-0000-0000-000000000000 not found
+2023-06-04 13:03:16.3876 Info Executed action SecureApplication.Controllers.BookController.DeleteBook (SecureApplication) in 3.4572ms
+2023-06-04 13:03:16.3876 Info Executed endpoint 'SecureApplication.Controllers.BookController.DeleteBook (SecureApplication)'
+2023-06-04 13:03:16.3876 Error NotFoundException occurred: Book with ID 00000000-0000-0000-0000-000000000000 not found
+2023-06-04 13:03:16.3876 Info Request finished HTTP/1.1 DELETE http://localhost/api/book/0B5851A4-02CA-4370-8D1G-130C36D369CA - - - 404 - application/json 5.3326ms
+2023-06-04 13:03:16.3876 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:03:16.3876 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.3876 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:03:16.4022 Info Attempting login for email: navee@example.com
+2023-06-04 13:03:16.4022 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:03:16.4022 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:03:16.4022 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:03:16.4022 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 0.7944ms
+2023-06-04 13:03:16.4022 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.4022 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 1.1871ms
+2023-06-04 13:03:16.4022 Info Request starting HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 359
+2023-06-04 13:03:16.4022 Info Executing endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:03:16.4022 Info Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBook(Entities.Dtos.RequestDto.BookDto) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:03:16.4022 Info Book created successfully with ISBN: 978-167883456780
+2023-06-04 13:03:16.4022 Info Book Created Sucessfully
+2023-06-04 13:03:16.4022 Info Executing StatusCodeResult, setting HTTP status code 201
+2023-06-04 13:03:16.4022 Info Executed action SecureApplication.Controllers.BookController.CreateBook (SecureApplication) in 1.5577ms
+2023-06-04 13:03:16.4022 Info Executed endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:03:16.4022 Info Request finished HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 359 - 201 - - 2.0346ms
+2023-06-04 13:03:16.4022 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:03:16.4022 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.4022 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:03:16.4022 Info Attempting login for email: navee@example.com
+2023-06-04 13:03:16.4022 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:03:16.4022 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:03:16.4022 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:03:16.4022 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 1.3681ms
+2023-06-04 13:03:16.4022 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.4022 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 1.8352ms
+2023-06-04 13:03:16.4022 Info Request starting HTTP/1.1 GET http://localhost/api/book - -
+2023-06-04 13:03:16.4022 Info Executing endpoint 'SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication)'
+2023-06-04 13:03:16.4022 Info Route matched with {action = "GetAllBooks", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks(Int32, Int32, System.String) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:03:16.4022 Info Retrieved 1 books from the collection
+2023-06-04 13:03:16.4022 Info Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Entities.Dtos.ResponseDto.AdminDto, SecureApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-04 13:03:16.4022 Info Executed action SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication) in 1.5105ms
+2023-06-04 13:03:16.4022 Info Executed endpoint 'SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication)'
+2023-06-04 13:03:16.4022 Info Request finished HTTP/1.1 GET http://localhost/api/book - - - 200 - application/json;+charset=utf-8 2.0291ms
+2023-06-04 13:03:16.4311 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49
+2023-06-04 13:03:16.4311 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.4311 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:03:16.4311 Info Attempting login for email: Abi@example.com
+2023-06-04 13:03:16.4311 Info JWT token generated for user with email: Abi@example.com
+2023-06-04 13:03:16.4311 Info Login Sucessfull for the user : Abi@example.com
+2023-06-04 13:03:16.4311 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:03:16.4311 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 1.0683ms
+2023-06-04 13:03:16.4311 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:03:16.4311 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49 - 200 - application/json;+charset=utf-8 1.4094ms
+2023-06-04 13:03:16.4329 Info Request starting HTTP/1.1 GET http://localhost/api/book - -
+2023-06-04 13:03:16.4329 Info Executing endpoint 'SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication)'
+2023-06-04 13:03:16.4329 Info Route matched with {action = "GetAllBooks", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks(Int32, Int32, System.String) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:03:16.4329 Info Retrieved 1 books from the collection
+2023-06-04 13:03:16.4329 Info Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Entities.Dtos.ResponseDto.ReaderDto, SecureApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-04 13:03:16.4329 Info Executed action SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication) in 6.2333ms
+2023-06-04 13:03:16.4329 Info Executed endpoint 'SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication)'
+2023-06-04 13:03:16.4329 Info Request finished HTTP/1.1 GET http://localhost/api/book - - - 200 - application/json;+charset=utf-8 7.5606ms
+2023-06-04 13:04:25.9390 Info User profile is available. Using 'C:\Users\NaveenaThangavel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-04 13:04:26.6079 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:04:26.6205 Warn Failed to determine the https port for redirect.
+2023-06-04 13:04:26.6635 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:04:26.6787 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:04:26.7960 Info Attempting login for email: navee@example.com
+2023-06-04 13:04:27.0173 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:04:27.0173 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:04:27.0173 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:04:27.0472 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 366.1161ms
+2023-06-04 13:04:27.0472 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:04:27.0472 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 444.3994ms
+2023-06-04 13:04:27.0472 Info Request starting HTTP/1.1 GET http://localhost/api/book/0B5851A4-02CB-4370-8D1B-130C36D369CA - -
+2023-06-04 13:04:27.1073 Info Executing endpoint 'SecureApplication.Controllers.BookController.GetBookById (SecureApplication)'
+2023-06-04 13:04:27.1073 Info Route matched with {action = "GetBookById", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookById(System.Guid) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:04:27.1073 Error No book found with ID: 0b5851a4-02cb-4370-8d1b-130c36d369ca
+2023-06-04 13:04:27.1214 Info Executed action SecureApplication.Controllers.BookController.GetBookById (SecureApplication) in 11.8786ms
+2023-06-04 13:04:27.1214 Info Executed endpoint 'SecureApplication.Controllers.BookController.GetBookById (SecureApplication)'
+2023-06-04 13:04:27.1463 Error NotFoundException occurred: Book with ID 0b5851a4-02cb-4370-8d1b-130c36d369ca not found
+2023-06-04 13:04:27.1463 Info Request finished HTTP/1.1 GET http://localhost/api/book/0B5851A4-02CB-4370-8D1B-130C36D369CA - - - 404 - application/json 95.2468ms
+2023-06-04 13:04:27.1558 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:04:27.1558 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:04:27.1558 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:04:27.1558 Info Attempting login for email: navee@example.com
+2023-06-04 13:04:27.1558 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:04:27.1558 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:04:27.1558 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:04:27.1558 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 3.5795ms
+2023-06-04 13:04:27.1558 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:04:27.1558 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 5.6546ms
+2023-06-04 13:04:27.1558 Info Request starting HTTP/1.1 DELETE http://localhost/api/book/0B5851A4-02CA-4370-8D1B-130C36D369CA - -
+2023-06-04 13:04:27.1558 Info Executing endpoint 'SecureApplication.Controllers.BookController.DeleteBook (SecureApplication)'
+2023-06-04 13:04:27.1558 Info Route matched with {action = "DeleteBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteBook(System.Guid) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:04:27.1558 Info Executed action SecureApplication.Controllers.BookController.DeleteBook (SecureApplication) in 5.2235ms
+2023-06-04 13:04:27.1558 Info Executed endpoint 'SecureApplication.Controllers.BookController.DeleteBook (SecureApplication)'
+2023-06-04 13:04:27.1715 Error An error  occurred: The instance of entity type 'Book' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+2023-06-04 13:04:27.1715 Info Request finished HTTP/1.1 DELETE http://localhost/api/book/0B5851A4-02CA-4370-8D1B-130C36D369CA - - - 500 - application/json 9.8923ms
+2023-06-04 13:04:27.1715 Info Request starting HTTP/1.1 GET http://localhost/api/book - -
+2023-06-04 13:04:27.1715 Info Executing endpoint 'SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication)'
+2023-06-04 13:04:27.1715 Info Route matched with {action = "GetAllBooks", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks(Int32, Int32, System.String) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:04:27.1951 Info Retrieved 1 books from the collection
+2023-06-04 13:04:27.1951 Info Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Entities.Dtos.ResponseDto.AdminDto, SecureApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-04 13:04:27.2284 Info Executed action SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication) in 54.3414ms
+2023-06-04 13:04:27.2284 Info Executed endpoint 'SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication)'
+2023-06-04 13:04:27.2284 Info Request finished HTTP/1.1 GET http://localhost/api/book - - - 200 - application/json;+charset=utf-8 56.4156ms
+2023-06-04 13:04:27.2431 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49
+2023-06-04 13:04:27.2431 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:04:27.2431 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:04:27.2431 Info Attempting login for email: Abi@example.com
+2023-06-04 13:04:27.2431 Info JWT token generated for user with email: Abi@example.com
+2023-06-04 13:04:27.2431 Info Login Sucessfull for the user : Abi@example.com
+2023-06-04 13:04:27.2431 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:04:27.2431 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 1.8419ms
+2023-06-04 13:04:27.2431 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:04:27.2431 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49 - 200 - application/json;+charset=utf-8 2.2338ms
+2023-06-04 13:04:27.2565 Info Request starting HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 359
+2023-06-04 13:04:27.2565 Info Executing endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:04:27.2565 Info Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBook(Entities.Dtos.RequestDto.BookDto) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:04:27.2565 Info Executed action SecureApplication.Controllers.BookController.CreateBook (SecureApplication) in 0.2903ms
+2023-06-04 13:04:27.2565 Info Executed endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:04:27.2565 Error Unauthorized access: Access denied
+2023-06-04 13:04:27.2565 Info Request finished HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 359 - 403 - application/json 4.7338ms
+2023-06-04 13:04:27.2623 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:04:27.2623 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:04:27.2623 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:04:27.2623 Info Attempting login for email: navee@example.com
+2023-06-04 13:04:27.2623 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:04:27.2623 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:04:27.2623 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:04:27.2623 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 1.0782ms
+2023-06-04 13:04:27.2623 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:04:27.2623 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 1.4149ms
+2023-06-04 13:04:27.2623 Info Request starting HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 341
+2023-06-04 13:04:27.2623 Info Executing endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:04:27.2623 Info Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBook(Entities.Dtos.RequestDto.BookDto) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:04:27.2780 Info Executed action SecureApplication.Controllers.BookController.CreateBook (SecureApplication) in 13.2076ms
+2023-06-04 13:04:27.2780 Info Executed endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:04:27.2780 Error BadRequestException occurred: Title is required
+2023-06-04 13:04:27.2780 Info Request finished HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 341 - 400 - application/json 16.3158ms
+2023-06-04 13:04:27.2780 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:04:27.2780 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:04:27.2780 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:04:27.2780 Info Attempting login for email: navee@example.com
+2023-06-04 13:04:27.2780 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:04:27.2780 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:04:27.2780 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:04:27.2780 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 1.2984ms
+2023-06-04 13:04:27.2780 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:04:27.2780 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 1.6871ms
+2023-06-04 13:04:27.2780 Info Request starting HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 359
+2023-06-04 13:04:27.2780 Info Executing endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:04:27.2780 Info Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBook(Entities.Dtos.RequestDto.BookDto) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:04:27.2966 Info Book created successfully with ISBN: 978-167883456700
+2023-06-04 13:04:27.2966 Info Book Created Sucessfully
+2023-06-04 13:04:27.2966 Info Executing StatusCodeResult, setting HTTP status code 201
+2023-06-04 13:04:27.2966 Info Executed action SecureApplication.Controllers.BookController.CreateBook (SecureApplication) in 15.6238ms
+2023-06-04 13:04:27.2966 Info Executed endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:04:27.2966 Info Request finished HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 359 - 201 - - 16.0448ms
+2023-06-04 13:04:27.2966 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:04:27.2966 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:04:27.2966 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:04:27.2966 Info Attempting login for email: navee@example.com
+2023-06-04 13:04:27.2966 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:04:27.2966 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:04:27.2966 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:04:27.2966 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 0.6984ms
+2023-06-04 13:04:27.2966 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:04:27.2966 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 0.9560ms
+2023-06-04 13:04:27.2966 Info Request starting HTTP/1.1 GET http://localhost/api/book/0B5851A4-02CA-4370-8D1B-130C36D369CA - -
+2023-06-04 13:04:27.2966 Info Executing endpoint 'SecureApplication.Controllers.BookController.GetBookById (SecureApplication)'
+2023-06-04 13:04:27.2966 Info Route matched with {action = "GetBookById", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookById(System.Guid) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:04:27.2966 Error No book found with ID: 0b5851a4-02ca-4370-8d1b-130c36d369ca
+2023-06-04 13:04:27.2966 Info Executed action SecureApplication.Controllers.BookController.GetBookById (SecureApplication) in 1.4361ms
+2023-06-04 13:04:27.2966 Info Executed endpoint 'SecureApplication.Controllers.BookController.GetBookById (SecureApplication)'
+2023-06-04 13:04:27.2966 Error NotFoundException occurred: Book with ID 0b5851a4-02ca-4370-8d1b-130c36d369ca not found
+2023-06-04 13:04:27.2966 Info Request finished HTTP/1.1 GET http://localhost/api/book/0B5851A4-02CA-4370-8D1B-130C36D369CA - - - 404 - application/json 3.3360ms
+2023-06-04 13:04:27.2966 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49
+2023-06-04 13:04:27.2966 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:04:27.2966 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:04:27.2966 Info Attempting login for email: Abi@example.com
+2023-06-04 13:04:27.2966 Info JWT token generated for user with email: Abi@example.com
+2023-06-04 13:04:27.2966 Info Login Sucessfull for the user : Abi@example.com
+2023-06-04 13:04:27.2966 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:04:27.3083 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 1.0495ms
+2023-06-04 13:04:27.3083 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:04:27.3083 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49 - 200 - application/json;+charset=utf-8 1.4672ms
+2023-06-04 13:04:27.3083 Info Request starting HTTP/1.1 DELETE http://localhost/api/book/0B5851A4-02CA-4370-8D1G-130C36D369CA - -
+2023-06-04 13:04:27.3083 Info Executing endpoint 'SecureApplication.Controllers.BookController.DeleteBook (SecureApplication)'
+2023-06-04 13:04:27.3083 Info Route matched with {action = "DeleteBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteBook(System.Guid) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:04:27.3083 Info Executed action SecureApplication.Controllers.BookController.DeleteBook (SecureApplication) in 0.1374ms
+2023-06-04 13:04:27.3083 Info Executed endpoint 'SecureApplication.Controllers.BookController.DeleteBook (SecureApplication)'
+2023-06-04 13:04:27.3083 Error Unauthorized access: Access denied
+2023-06-04 13:04:27.3083 Info Request finished HTTP/1.1 DELETE http://localhost/api/book/0B5851A4-02CA-4370-8D1G-130C36D369CA - - - 403 - application/json 2.6919ms
+2023-06-04 13:04:27.3083 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:04:27.3083 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:04:27.3083 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:04:27.3083 Info Attempting login for email: navee@example.com
+2023-06-04 13:04:27.3083 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:04:27.3083 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:04:27.3083 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:04:27.3083 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 1.8693ms
+2023-06-04 13:04:27.3083 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:04:27.3083 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 2.3056ms
+2023-06-04 13:04:27.3083 Info Request starting HTTP/1.1 DELETE http://localhost/api/book/0B5851A4-02CA-4370-8D1G-130C36D369CA - -
+2023-06-04 13:04:27.3083 Info Executing endpoint 'SecureApplication.Controllers.BookController.DeleteBook (SecureApplication)'
+2023-06-04 13:04:27.3083 Info Route matched with {action = "DeleteBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteBook(System.Guid) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:04:27.3083 Error Book with ID 00000000-0000-0000-0000-000000000000 not found
+2023-06-04 13:04:27.3083 Info Executed action SecureApplication.Controllers.BookController.DeleteBook (SecureApplication) in 3.0161ms
+2023-06-04 13:04:27.3083 Info Executed endpoint 'SecureApplication.Controllers.BookController.DeleteBook (SecureApplication)'
+2023-06-04 13:04:27.3083 Error NotFoundException occurred: Book with ID 00000000-0000-0000-0000-000000000000 not found
+2023-06-04 13:04:27.3083 Info Request finished HTTP/1.1 DELETE http://localhost/api/book/0B5851A4-02CA-4370-8D1G-130C36D369CA - - - 404 - application/json 5.0679ms
+2023-06-04 13:04:27.3083 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:04:27.3083 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:04:27.3083 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:04:27.3083 Info Attempting login for email: navee@example.com
+2023-06-04 13:04:27.3083 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:04:27.3083 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:04:27.3083 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:04:27.3083 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 1.1065ms
+2023-06-04 13:04:27.3083 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:04:27.3083 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 1.5459ms
+2023-06-04 13:04:27.3083 Info Request starting HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 359
+2023-06-04 13:04:27.3083 Info Executing endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:04:27.3083 Info Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBook(Entities.Dtos.RequestDto.BookDto) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:04:27.3250 Info Book created successfully with ISBN: 978-167883456780
+2023-06-04 13:04:27.3250 Info Book Created Sucessfully
+2023-06-04 13:04:27.3250 Info Executing StatusCodeResult, setting HTTP status code 201
+2023-06-04 13:04:27.3250 Info Executed action SecureApplication.Controllers.BookController.CreateBook (SecureApplication) in 1.703ms
+2023-06-04 13:04:27.3250 Info Executed endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:04:27.3250 Info Request finished HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 359 - 201 - - 2.2806ms
+2023-06-04 13:04:27.3250 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:04:27.3250 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:04:27.3250 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:04:27.3250 Info Attempting login for email: navee@example.com
+2023-06-04 13:04:27.3250 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:04:27.3250 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:04:27.3250 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:04:27.3250 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 1.0851ms
+2023-06-04 13:04:27.3250 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:04:27.3250 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 1.5466ms
+2023-06-04 13:04:27.3250 Info Request starting HTTP/1.1 GET http://localhost/api/book - -
+2023-06-04 13:04:27.3250 Info Executing endpoint 'SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication)'
+2023-06-04 13:04:27.3250 Info Route matched with {action = "GetAllBooks", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks(Int32, Int32, System.String) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:04:27.3250 Info Retrieved 1 books from the collection
+2023-06-04 13:04:27.3250 Info Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Entities.Dtos.ResponseDto.AdminDto, SecureApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-04 13:04:27.3250 Info Executed action SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication) in 2.849ms
+2023-06-04 13:04:27.3250 Info Executed endpoint 'SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication)'
+2023-06-04 13:04:27.3250 Info Request finished HTTP/1.1 GET http://localhost/api/book - - - 200 - application/json;+charset=utf-8 4.0549ms
+2023-06-04 13:04:27.3558 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49
+2023-06-04 13:04:27.3558 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:04:27.3558 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:04:27.3558 Info Attempting login for email: Abi@example.com
+2023-06-04 13:04:27.3558 Info JWT token generated for user with email: Abi@example.com
+2023-06-04 13:04:27.3558 Info Login Sucessfull for the user : Abi@example.com
+2023-06-04 13:04:27.3558 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:04:27.3558 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 1.7847ms
+2023-06-04 13:04:27.3558 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:04:27.3558 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49 - 200 - application/json;+charset=utf-8 2.5755ms
+2023-06-04 13:04:27.3558 Info Request starting HTTP/1.1 GET http://localhost/api/book - -
+2023-06-04 13:04:27.3558 Info Executing endpoint 'SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication)'
+2023-06-04 13:04:27.3558 Info Route matched with {action = "GetAllBooks", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks(Int32, Int32, System.String) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:04:27.3558 Info Retrieved 1 books from the collection
+2023-06-04 13:04:27.3558 Info Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Entities.Dtos.ResponseDto.ReaderDto, SecureApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-04 13:04:27.3558 Info Executed action SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication) in 10.1671ms
+2023-06-04 13:04:27.3558 Info Executed endpoint 'SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication)'
+2023-06-04 13:04:27.3558 Info Request finished HTTP/1.1 GET http://localhost/api/book - - - 200 - application/json;+charset=utf-8 10.9365ms
+2023-06-04 13:07:10.1679 Info User profile is available. Using 'C:\Users\NaveenaThangavel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-04 13:07:10.8670 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:07:10.8800 Warn Failed to determine the https port for redirect.
+2023-06-04 13:07:10.9227 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:10.9396 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:07:11.0717 Info Attempting login for email: navee@example.com
+2023-06-04 13:07:11.2815 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:07:11.2815 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:07:11.2865 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:07:11.3099 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 367.3441ms
+2023-06-04 13:07:11.3099 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:11.3099 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 448.6425ms
+2023-06-04 13:07:11.3099 Info Request starting HTTP/1.1 GET http://localhost/api/book/0B5851A4-02CA-4370-8D1B-130C36D369CA - -
+2023-06-04 13:07:11.3765 Info Executing endpoint 'SecureApplication.Controllers.BookController.GetBookById (SecureApplication)'
+2023-06-04 13:07:11.3765 Info Route matched with {action = "GetBookById", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookById(System.Guid) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:07:11.3995 Info Retrieved book with ID: 0b5851a4-02ca-4370-8d1b-130c36d369ca
+2023-06-04 13:07:11.3995 Info Returned the book with this 0b5851a4-02ca-4370-8d1b-130c36d369ca
+2023-06-04 13:07:11.3995 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.AdminDto'.
+2023-06-04 13:07:11.4302 Info Executed action SecureApplication.Controllers.BookController.GetBookById (SecureApplication) in 52.3726ms
+2023-06-04 13:07:11.4302 Info Executed endpoint 'SecureApplication.Controllers.BookController.GetBookById (SecureApplication)'
+2023-06-04 13:07:11.4302 Info Request finished HTTP/1.1 GET http://localhost/api/book/0B5851A4-02CA-4370-8D1B-130C36D369CA - - - 200 - application/json;+charset=utf-8 113.1696ms
+2023-06-04 13:07:11.4477 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49
+2023-06-04 13:07:11.4497 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:11.4497 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:07:11.4497 Info Attempting login for email: Abi@example.com
+2023-06-04 13:07:11.4497 Info JWT token generated for user with email: Abi@example.com
+2023-06-04 13:07:11.4497 Info Login Sucessfull for the user : Abi@example.com
+2023-06-04 13:07:11.4497 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:07:11.4497 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 3.9334ms
+2023-06-04 13:07:11.4497 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:11.4497 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49 - 200 - application/json;+charset=utf-8 6.2377ms
+2023-06-04 13:07:11.4497 Info Request starting HTTP/1.1 GET http://localhost/api/book/0B5851A4-02CA-4370-8D1B-130C36D369CA - -
+2023-06-04 13:07:11.4497 Info Executing endpoint 'SecureApplication.Controllers.BookController.GetBookById (SecureApplication)'
+2023-06-04 13:07:11.4497 Info Route matched with {action = "GetBookById", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookById(System.Guid) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:07:11.4497 Info Retrieved book with ID: 0b5851a4-02ca-4370-8d1b-130c36d369ca
+2023-06-04 13:07:11.4497 Info Returned the book with this 0b5851a4-02ca-4370-8d1b-130c36d369ca
+2023-06-04 13:07:11.4497 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.ReaderDto'.
+2023-06-04 13:07:11.4497 Info Executed action SecureApplication.Controllers.BookController.GetBookById (SecureApplication) in 4.9614ms
+2023-06-04 13:07:11.4497 Info Executed endpoint 'SecureApplication.Controllers.BookController.GetBookById (SecureApplication)'
+2023-06-04 13:07:11.4497 Info Request finished HTTP/1.1 GET http://localhost/api/book/0B5851A4-02CA-4370-8D1B-130C36D369CA - - - 200 - application/json;+charset=utf-8 5.7765ms
+2023-06-04 13:07:43.1403 Info User profile is available. Using 'C:\Users\NaveenaThangavel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-04 13:07:43.1403 Info User profile is available. Using 'C:\Users\NaveenaThangavel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-04 13:07:43.8037 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:07:43.8037 Info Request starting HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 162
+2023-06-04 13:07:43.8173 Warn Failed to determine the https port for redirect.
+2023-06-04 13:07:43.8173 Warn Failed to determine the https port for redirect.
+2023-06-04 13:07:43.8640 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:43.8640 Info Executing endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:07:43.8640 Info Route matched with {action = "CreateUserAccount", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateUserAccount(Entities.Dtos.RequestDto.UserDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:07:43.8640 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:07:44.0132 Info Creating a new user with email: test@example.com
+2023-06-04 13:07:44.0132 Info Attempting login for email: navee@example.com
+2023-06-04 13:07:44.1488 Info User created successfully with email: test@example.com
+2023-06-04 13:07:44.1510 Info Executing StatusCodeResult, setting HTTP status code 201
+2023-06-04 13:07:44.1540 Info Executed action SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication) in 271.4437ms
+2023-06-04 13:07:44.1540 Info Executed endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:07:44.1540 Info Request finished HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 162 - 201 - - 360.1893ms
+2023-06-04 13:07:44.1698 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 54
+2023-06-04 13:07:44.1698 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.1698 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:07:44.1698 Info Attempting login for email: test@example.com
+2023-06-04 13:07:44.2116 Info JWT token generated for user with email: test@example.com
+2023-06-04 13:07:44.2116 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:07:44.2131 Info Login Sucessfull for the user : test@example.com
+2023-06-04 13:07:44.2131 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:07:44.2173 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:07:44.2173 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:07:44.2173 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 354.9754ms
+2023-06-04 13:07:44.2173 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.2173 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 63.5839ms
+2023-06-04 13:07:44.2355 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.2355 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 435.4523ms
+2023-06-04 13:07:44.2355 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 54 - 200 - application/json;+charset=utf-8 65.9004ms
+2023-06-04 13:07:44.2355 Info Request starting HTTP/1.1 DELETE http://localhost/api/book/0B5851A4-02CA-4370-8D1B-130C36D369CA - -
+2023-06-04 13:07:44.2355 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:07:44.2355 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.2355 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:07:44.2468 Info Attempting login for email: navee@example.com
+2023-06-04 13:07:44.2468 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:07:44.2468 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:07:44.2468 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:07:44.2468 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 4.0862ms
+2023-06-04 13:07:44.2468 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.2468 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 6.7719ms
+2023-06-04 13:07:44.2468 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:07:44.2468 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.2468 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:07:44.2468 Warn Model validation failed while logging in.
+2023-06-04 13:07:44.2468 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 5.6334ms
+2023-06-04 13:07:44.2468 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.2728 Error BadRequestException occurred: Enter a valid email address
+2023-06-04 13:07:44.2728 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 400 - application/json 25.9521ms
+2023-06-04 13:07:44.2728 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49
+2023-06-04 13:07:44.2728 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.2728 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:07:44.2767 Info Attempting login for email: Abi@example.com
+2023-06-04 13:07:44.2767 Info JWT token generated for user with email: Abi@example.com
+2023-06-04 13:07:44.2767 Info Login Sucessfull for the user : Abi@example.com
+2023-06-04 13:07:44.2767 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:07:44.2767 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 0.7889ms
+2023-06-04 13:07:44.2767 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.2767 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49 - 200 - application/json;+charset=utf-8 1.1381ms
+2023-06-04 13:07:44.2767 Info Request starting HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 163
+2023-06-04 13:07:44.2767 Info Executing endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:07:44.2767 Info Route matched with {action = "CreateUserAccount", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateUserAccount(Entities.Dtos.RequestDto.UserDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:07:44.2767 Info Creating a new user with email: navee@example.com
+2023-06-04 13:07:44.2767 Error Failed to create user account due to conflict for email: navee@example.com
+2023-06-04 13:07:44.2767 Info Executed action SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication) in 1.3228ms
+2023-06-04 13:07:44.2767 Info Executed endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:07:44.2767 Error ConflictException occurred: User with Email or Phone already exists
+2023-06-04 13:07:44.2767 Info Request finished HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 163 - 409 - application/json 3.2479ms
+2023-06-04 13:07:44.2767 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 55
+2023-06-04 13:07:44.2767 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.2767 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:07:44.2767 Info Attempting login for email: navee@example.com
+2023-06-04 13:07:44.2767 Error Invalid user credentials,Given Password is incorrect
+2023-06-04 13:07:44.2767 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 2.0863ms
+2023-06-04 13:07:44.2767 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.2767 Error UnauthorizedException occurred: Given password is incorrect
+2023-06-04 13:07:44.2767 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 55 - 401 - application/json 5.3892ms
+2023-06-04 13:07:44.2767 Info Request starting HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 161
+2023-06-04 13:07:44.2767 Info Executing endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:07:44.2767 Info Route matched with {action = "CreateUserAccount", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateUserAccount(Entities.Dtos.RequestDto.UserDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:07:44.2767 Warn Model validation failed while creating user account
+2023-06-04 13:07:44.2767 Info Executed action SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication) in 0.9513ms
+2023-06-04 13:07:44.2767 Info Executed endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:07:44.2927 Error BadRequestException occurred: Invalid Date of Birth.
+2023-06-04 13:07:44.2927 Info Request finished HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 161 - 400 - application/json 2.8903ms
+2023-06-04 13:07:44.2927 Info Executing endpoint 'SecureApplication.Controllers.BookController.DeleteBook (SecureApplication)'
+2023-06-04 13:07:44.2927 Info Route matched with {action = "DeleteBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteBook(System.Guid) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:07:44.3274 Info Executed action SecureApplication.Controllers.BookController.DeleteBook (SecureApplication) in 22.1911ms
+2023-06-04 13:07:44.3274 Info Executed endpoint 'SecureApplication.Controllers.BookController.DeleteBook (SecureApplication)'
+2023-06-04 13:07:44.3274 Error An error  occurred: The instance of entity type 'Book' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+2023-06-04 13:07:44.3274 Info Request finished HTTP/1.1 DELETE http://localhost/api/book/0B5851A4-02CA-4370-8D1B-130C36D369CA - - - 500 - application/json 92.4036ms
+2023-06-04 13:07:44.3274 Info Request starting HTTP/1.1 GET http://localhost/api/book - -
+2023-06-04 13:07:44.3395 Info Executing endpoint 'SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication)'
+2023-06-04 13:07:44.3395 Info Route matched with {action = "GetAllBooks", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks(Int32, Int32, System.String) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:07:44.3624 Info Retrieved 1 books from the collection
+2023-06-04 13:07:44.3624 Info Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Entities.Dtos.ResponseDto.AdminDto, SecureApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-04 13:07:44.3919 Info Executed action SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication) in 51.2149ms
+2023-06-04 13:07:44.3919 Info Executed endpoint 'SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication)'
+2023-06-04 13:07:44.3919 Info Request finished HTTP/1.1 GET http://localhost/api/book - - - 200 - application/json;+charset=utf-8 61.0467ms
+2023-06-04 13:07:44.3919 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49
+2023-06-04 13:07:44.3919 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.3919 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:07:44.3919 Info Attempting login for email: Abi@example.com
+2023-06-04 13:07:44.3919 Info JWT token generated for user with email: Abi@example.com
+2023-06-04 13:07:44.3919 Info Login Sucessfull for the user : Abi@example.com
+2023-06-04 13:07:44.3919 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:07:44.4020 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 1.9957ms
+2023-06-04 13:07:44.4020 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.4020 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49 - 200 - application/json;+charset=utf-8 2.6446ms
+2023-06-04 13:07:44.4020 Info Request starting HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 359
+2023-06-04 13:07:44.4020 Info Executing endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:07:44.4020 Info Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBook(Entities.Dtos.RequestDto.BookDto) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:07:44.4020 Info Executed action SecureApplication.Controllers.BookController.CreateBook (SecureApplication) in 0.1695ms
+2023-06-04 13:07:44.4020 Info Executed endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:07:44.4020 Error Unauthorized access: Access denied
+2023-06-04 13:07:44.4020 Info Request finished HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 359 - 403 - application/json 3.6796ms
+2023-06-04 13:07:44.4020 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:07:44.4020 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.4020 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:07:44.4020 Info Attempting login for email: navee@example.com
+2023-06-04 13:07:44.4020 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:07:44.4020 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:07:44.4020 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:07:44.4020 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 2.4172ms
+2023-06-04 13:07:44.4020 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.4020 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 2.7164ms
+2023-06-04 13:07:44.4020 Info Request starting HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 341
+2023-06-04 13:07:44.4020 Info Executing endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:07:44.4020 Info Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBook(Entities.Dtos.RequestDto.BookDto) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:07:44.4277 Info Executed action SecureApplication.Controllers.BookController.CreateBook (SecureApplication) in 10.6992ms
+2023-06-04 13:07:44.4277 Info Executed endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:07:44.4277 Error BadRequestException occurred: Title is required
+2023-06-04 13:07:44.4277 Info Request finished HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 341 - 400 - application/json 13.6543ms
+2023-06-04 13:07:44.4277 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:07:44.4277 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.4277 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:07:44.4277 Info Attempting login for email: navee@example.com
+2023-06-04 13:07:44.4277 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:07:44.4277 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:07:44.4277 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:07:44.4277 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 0.9847ms
+2023-06-04 13:07:44.4277 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.4277 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 1.2559ms
+2023-06-04 13:07:44.4277 Info Request starting HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 359
+2023-06-04 13:07:44.4277 Info Executing endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:07:44.4277 Info Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBook(Entities.Dtos.RequestDto.BookDto) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:07:44.4408 Info Book created successfully with ISBN: 978-167883456700
+2023-06-04 13:07:44.4408 Info Book Created Sucessfully
+2023-06-04 13:07:44.4408 Info Executing StatusCodeResult, setting HTTP status code 201
+2023-06-04 13:07:44.4408 Info Executed action SecureApplication.Controllers.BookController.CreateBook (SecureApplication) in 8.6622ms
+2023-06-04 13:07:44.4408 Info Executed endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:07:44.4408 Info Request finished HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 359 - 201 - - 9.2801ms
+2023-06-04 13:07:44.4408 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:07:44.4408 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.4408 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:07:44.4408 Info Attempting login for email: navee@example.com
+2023-06-04 13:07:44.4408 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:07:44.4408 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:07:44.4408 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:07:44.4408 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 0.6453ms
+2023-06-04 13:07:44.4408 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.4408 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 0.8864ms
+2023-06-04 13:07:44.4408 Info Request starting HTTP/1.1 GET http://localhost/api/book/0B5851A4-02CA-4370-8D1B-130C36D369CA - -
+2023-06-04 13:07:44.4408 Info Executing endpoint 'SecureApplication.Controllers.BookController.GetBookById (SecureApplication)'
+2023-06-04 13:07:44.4408 Info Route matched with {action = "GetBookById", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetBookById(System.Guid) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:07:44.4408 Error No book found with ID: 0b5851a4-02ca-4370-8d1b-130c36d369ca
+2023-06-04 13:07:44.4408 Info Executed action SecureApplication.Controllers.BookController.GetBookById (SecureApplication) in 2.901ms
+2023-06-04 13:07:44.4408 Info Executed endpoint 'SecureApplication.Controllers.BookController.GetBookById (SecureApplication)'
+2023-06-04 13:07:44.4408 Error NotFoundException occurred: Book with ID 0b5851a4-02ca-4370-8d1b-130c36d369ca not found
+2023-06-04 13:07:44.4492 Info Request finished HTTP/1.1 GET http://localhost/api/book/0B5851A4-02CA-4370-8D1B-130C36D369CA - - - 404 - application/json 5.9450ms
+2023-06-04 13:07:44.4492 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49
+2023-06-04 13:07:44.4492 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.4492 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:07:44.4492 Info Attempting login for email: Abi@example.com
+2023-06-04 13:07:44.4492 Info JWT token generated for user with email: Abi@example.com
+2023-06-04 13:07:44.4492 Info Login Sucessfull for the user : Abi@example.com
+2023-06-04 13:07:44.4492 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:07:44.4492 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 1.6998ms
+2023-06-04 13:07:44.4492 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.4492 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49 - 200 - application/json;+charset=utf-8 2.3656ms
+2023-06-04 13:07:44.4492 Info Request starting HTTP/1.1 DELETE http://localhost/api/book/0B5851A4-02CA-4370-8D1G-130C36D369CA - -
+2023-06-04 13:07:44.4492 Info Executing endpoint 'SecureApplication.Controllers.BookController.DeleteBook (SecureApplication)'
+2023-06-04 13:07:44.4492 Info Route matched with {action = "DeleteBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteBook(System.Guid) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:07:44.4492 Info Executed action SecureApplication.Controllers.BookController.DeleteBook (SecureApplication) in 0.1027ms
+2023-06-04 13:07:44.4492 Info Executed endpoint 'SecureApplication.Controllers.BookController.DeleteBook (SecureApplication)'
+2023-06-04 13:07:44.4492 Error Unauthorized access: Access denied
+2023-06-04 13:07:44.4492 Info Request finished HTTP/1.1 DELETE http://localhost/api/book/0B5851A4-02CA-4370-8D1G-130C36D369CA - - - 403 - application/json 1.7577ms
+2023-06-04 13:07:44.4492 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:07:44.4492 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.4492 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:07:44.4492 Info Attempting login for email: navee@example.com
+2023-06-04 13:07:44.4492 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:07:44.4492 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:07:44.4492 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:07:44.4492 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 0.6581ms
+2023-06-04 13:07:44.4492 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.4492 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 0.8938ms
+2023-06-04 13:07:44.4492 Info Request starting HTTP/1.1 DELETE http://localhost/api/book/0B5851A4-02CA-4370-8D1G-130C36D369CA - -
+2023-06-04 13:07:44.4492 Info Executing endpoint 'SecureApplication.Controllers.BookController.DeleteBook (SecureApplication)'
+2023-06-04 13:07:44.4492 Info Route matched with {action = "DeleteBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteBook(System.Guid) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:07:44.4492 Error Book with ID 00000000-0000-0000-0000-000000000000 not found
+2023-06-04 13:07:44.4492 Info Executed action SecureApplication.Controllers.BookController.DeleteBook (SecureApplication) in 2.5816ms
+2023-06-04 13:07:44.4492 Info Executed endpoint 'SecureApplication.Controllers.BookController.DeleteBook (SecureApplication)'
+2023-06-04 13:07:44.4492 Error NotFoundException occurred: Book with ID 00000000-0000-0000-0000-000000000000 not found
+2023-06-04 13:07:44.4492 Info Request finished HTTP/1.1 DELETE http://localhost/api/book/0B5851A4-02CA-4370-8D1G-130C36D369CA - - - 404 - application/json 5.9144ms
+2023-06-04 13:07:44.4650 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:07:44.4650 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.4650 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:07:44.4650 Info Attempting login for email: navee@example.com
+2023-06-04 13:07:44.4650 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:07:44.4650 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:07:44.4650 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:07:44.4650 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 1.7511ms
+2023-06-04 13:07:44.4650 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.4650 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 2.4514ms
+2023-06-04 13:07:44.4650 Info Request starting HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 359
+2023-06-04 13:07:44.4650 Info Executing endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:07:44.4650 Info Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBook(Entities.Dtos.RequestDto.BookDto) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:07:44.4650 Info Book created successfully with ISBN: 978-167883456780
+2023-06-04 13:07:44.4650 Info Book Created Sucessfully
+2023-06-04 13:07:44.4650 Info Executing StatusCodeResult, setting HTTP status code 201
+2023-06-04 13:07:44.4650 Info Executed action SecureApplication.Controllers.BookController.CreateBook (SecureApplication) in 2.1709ms
+2023-06-04 13:07:44.4650 Info Executed endpoint 'SecureApplication.Controllers.BookController.CreateBook (SecureApplication)'
+2023-06-04 13:07:44.4650 Info Request finished HTTP/1.1 POST http://localhost/api/book application/json;+charset=utf-8 359 - 201 - - 2.8359ms
+2023-06-04 13:07:44.4650 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:07:44.4650 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.4650 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:07:44.4650 Info Attempting login for email: navee@example.com
+2023-06-04 13:07:44.4650 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:07:44.4650 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:07:44.4650 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:07:44.4650 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 1.0403ms
+2023-06-04 13:07:44.4650 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.4650 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 1.6336ms
+2023-06-04 13:07:44.4650 Info Request starting HTTP/1.1 GET http://localhost/api/book - -
+2023-06-04 13:07:44.4650 Info Executing endpoint 'SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication)'
+2023-06-04 13:07:44.4650 Info Route matched with {action = "GetAllBooks", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks(Int32, Int32, System.String) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:07:44.4650 Info Retrieved 1 books from the collection
+2023-06-04 13:07:44.4650 Info Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Entities.Dtos.ResponseDto.AdminDto, SecureApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-04 13:07:44.4650 Info Executed action SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication) in 1.4758ms
+2023-06-04 13:07:44.4650 Info Executed endpoint 'SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication)'
+2023-06-04 13:07:44.4650 Info Request finished HTTP/1.1 GET http://localhost/api/book - - - 200 - application/json;+charset=utf-8 2.1698ms
+2023-06-04 13:07:44.4940 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49
+2023-06-04 13:07:44.4940 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.4940 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:07:44.4940 Info Attempting login for email: Abi@example.com
+2023-06-04 13:07:44.4940 Info JWT token generated for user with email: Abi@example.com
+2023-06-04 13:07:44.4940 Info Login Sucessfull for the user : Abi@example.com
+2023-06-04 13:07:44.4940 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:07:44.4940 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 0.6434ms
+2023-06-04 13:07:44.4940 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:07:44.4940 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49 - 200 - application/json;+charset=utf-8 0.9217ms
+2023-06-04 13:07:44.4951 Info Request starting HTTP/1.1 GET http://localhost/api/book - -
+2023-06-04 13:07:44.4951 Info Executing endpoint 'SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication)'
+2023-06-04 13:07:44.4951 Info Route matched with {action = "GetAllBooks", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks(Int32, Int32, System.String) on controller SecureApplication.Controllers.BookController (SecureApplication).
+2023-06-04 13:07:44.4951 Info Retrieved 1 books from the collection
+2023-06-04 13:07:44.4951 Info Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Entities.Dtos.ResponseDto.ReaderDto, SecureApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-04 13:07:44.4951 Info Executed action SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication) in 6.9998ms
+2023-06-04 13:07:44.4951 Info Executed endpoint 'SecureApplication.Controllers.BookController.GetAllBooks (SecureApplication)'
+2023-06-04 13:07:44.4951 Info Request finished HTTP/1.1 GET http://localhost/api/book - - - 200 - application/json;+charset=utf-8 7.6130ms
+2023-06-04 13:08:01.5433 Info User profile is available. Using 'C:\Users\NaveenaThangavel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-04 13:08:02.2164 Info Request starting HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 162
+2023-06-04 13:08:02.2164 Warn Failed to determine the https port for redirect.
+2023-06-04 13:08:02.2737 Info Executing endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:08:02.2912 Info Route matched with {action = "CreateUserAccount", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateUserAccount(Entities.Dtos.RequestDto.UserDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:08:02.4476 Info Creating a new user with email: test@example.com
+2023-06-04 13:08:02.5804 Info User created successfully with email: test@example.com
+2023-06-04 13:08:02.5804 Info Executing StatusCodeResult, setting HTTP status code 201
+2023-06-04 13:08:02.5804 Info Executed action SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication) in 292.3343ms
+2023-06-04 13:08:02.5804 Info Executed endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:08:02.5923 Info Request finished HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 162 - 201 - - 378.3845ms
+2023-06-04 13:08:02.5923 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 54
+2023-06-04 13:08:02.5923 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:08:02.6053 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:08:02.6053 Info Attempting login for email: test@example.com
+2023-06-04 13:08:02.7005 Info JWT token generated for user with email: test@example.com
+2023-06-04 13:08:02.7005 Info Login Sucessfull for the user : test@example.com
+2023-06-04 13:08:02.7005 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:08:02.7217 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 116.3514ms
+2023-06-04 13:08:02.7217 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:08:02.7217 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 54 - 200 - application/json;+charset=utf-8 119.0068ms
+2023-06-04 13:08:02.7400 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:08:02.7400 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:08:02.7400 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:08:02.7441 Info Attempting login for email: navee@example.com
+2023-06-04 13:08:02.7480 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:08:02.7480 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:08:02.7480 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:08:02.7480 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 7.1281ms
+2023-06-04 13:08:02.7480 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:08:02.7480 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 9.1195ms
+2023-06-04 13:08:02.7480 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:08:02.7480 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:08:02.7480 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:08:02.7480 Warn Model validation failed while logging in.
+2023-06-04 13:08:02.7480 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 3.6748ms
+2023-06-04 13:08:02.7480 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:08:02.7767 Error BadRequestException occurred: Enter a valid email address
+2023-06-04 13:08:02.7767 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 400 - application/json 26.7030ms
+2023-06-04 13:08:02.7767 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49
+2023-06-04 13:08:02.7767 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:08:02.7767 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:08:02.7767 Info Attempting login for email: Abi@example.com
+2023-06-04 13:08:02.7805 Info JWT token generated for user with email: Abi@example.com
+2023-06-04 13:08:02.7805 Info Login Sucessfull for the user : Abi@example.com
+2023-06-04 13:08:02.7805 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:08:02.7805 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 0.6761ms
+2023-06-04 13:08:02.7805 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:08:02.7805 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49 - 200 - application/json;+charset=utf-8 0.9384ms
+2023-06-04 13:08:02.7805 Info Request starting HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 163
+2023-06-04 13:08:02.7805 Info Executing endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:08:02.7805 Info Route matched with {action = "CreateUserAccount", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateUserAccount(Entities.Dtos.RequestDto.UserDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:08:02.7805 Info Creating a new user with email: navee@example.com
+2023-06-04 13:08:02.7805 Error Failed to create user account due to conflict for email: navee@example.com
+2023-06-04 13:08:02.7805 Info Executed action SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication) in 1.255ms
+2023-06-04 13:08:02.7805 Info Executed endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:08:02.7805 Error ConflictException occurred: User with Email or Phone already exists
+2023-06-04 13:08:02.7805 Info Request finished HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 163 - 409 - application/json 3.6376ms
+2023-06-04 13:08:02.7805 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 55
+2023-06-04 13:08:02.7805 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:08:02.7805 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:08:02.7805 Info Attempting login for email: navee@example.com
+2023-06-04 13:08:02.7805 Error Invalid user credentials,Given Password is incorrect
+2023-06-04 13:08:02.7805 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 1.1939ms
+2023-06-04 13:08:02.7805 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:08:02.8047 Error UnauthorizedException occurred: Given password is incorrect
+2023-06-04 13:08:02.8047 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 55 - 401 - application/json 18.7969ms
+2023-06-04 13:08:02.8091 Info Request starting HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 161
+2023-06-04 13:08:02.8091 Info Executing endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:08:02.8091 Info Route matched with {action = "CreateUserAccount", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateUserAccount(Entities.Dtos.RequestDto.UserDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:08:02.8091 Warn Model validation failed while creating user account
+2023-06-04 13:08:02.8091 Info Executed action SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication) in 0.7725ms
+2023-06-04 13:08:02.8091 Info Executed endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:08:02.8091 Error BadRequestException occurred: Invalid Date of Birth.
+2023-06-04 13:08:02.8091 Info Request finished HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 161 - 400 - application/json 2.7473ms
+2023-06-04 13:08:29.0436 Info User profile is available. Using 'C:\Users\NaveenaThangavel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-04 13:09:31.8104 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 54
+2023-06-04 13:09:31.8400 Warn Failed to determine the https port for redirect.
+2023-06-04 13:09:31.9063 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:09:31.9313 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:09:32.1139 Info Attempting login for email: test@example.com
+2023-06-04 13:09:32.4150 Error Invalid user credentials,Given Email :test@example.com is incorrect
+2023-06-04 13:09:36.7831 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 4847.3183ms
+2023-06-04 13:09:36.7933 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:09:39.0848 Error UnauthorizedException occurred: Given Email is incorrect
+2023-06-04 13:09:41.4938 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 54 - 401 - application/json 9688.6746ms
+2023-06-04 13:09:56.7686 Info User profile is available. Using 'C:\Users\NaveenaThangavel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-04 13:09:57.4261 Info Request starting HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 162
+2023-06-04 13:09:57.4386 Warn Failed to determine the https port for redirect.
+2023-06-04 13:09:57.4816 Info Executing endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:09:57.4979 Info Route matched with {action = "CreateUserAccount", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateUserAccount(Entities.Dtos.RequestDto.UserDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:09:57.6413 Info Creating a new user with email: test@example.com
+2023-06-04 13:09:57.7723 Info User created successfully with email: test@example.com
+2023-06-04 13:09:57.7776 Info Executing StatusCodeResult, setting HTTP status code 201
+2023-06-04 13:09:57.7776 Info Executed action SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication) in 280.0156ms
+2023-06-04 13:09:57.7776 Info Executed endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:09:57.7776 Info Request finished HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 162 - 201 - - 363.2852ms
+2023-06-04 13:09:57.7970 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 54
+2023-06-04 13:09:57.7970 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:09:57.7970 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:09:57.7970 Info Attempting login for email: test@example.com
+2023-06-04 13:09:57.8959 Info JWT token generated for user with email: test@example.com
+2023-06-04 13:09:57.8959 Info Login Sucessfull for the user : test@example.com
+2023-06-04 13:09:57.8959 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:09:57.9187 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 118.7925ms
+2023-06-04 13:09:57.9187 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:09:57.9187 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 54 - 200 - application/json;+charset=utf-8 121.8924ms
+2023-06-04 13:09:57.9375 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:09:57.9401 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:09:57.9401 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:09:57.9401 Info Attempting login for email: navee@example.com
+2023-06-04 13:09:57.9401 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:09:57.9488 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:09:57.9488 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:09:57.9488 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 9.5579ms
+2023-06-04 13:09:57.9488 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:09:57.9488 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 12.6205ms
+2023-06-04 13:09:57.9488 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:09:57.9488 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:09:57.9488 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:09:57.9488 Warn Model validation failed while logging in.
+2023-06-04 13:09:57.9488 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 6.1996ms
+2023-06-04 13:09:57.9488 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:09:57.9776 Error BadRequestException occurred: Enter a valid email address
+2023-06-04 13:09:57.9809 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 400 - application/json 26.9743ms
+2023-06-04 13:09:57.9809 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49
+2023-06-04 13:09:57.9809 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:09:57.9809 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:09:57.9809 Info Attempting login for email: Abi@example.com
+2023-06-04 13:09:57.9809 Info JWT token generated for user with email: Abi@example.com
+2023-06-04 13:09:57.9809 Info Login Sucessfull for the user : Abi@example.com
+2023-06-04 13:09:57.9809 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:09:57.9809 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 1.4334ms
+2023-06-04 13:09:57.9809 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:09:57.9809 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49 - 200 - application/json;+charset=utf-8 1.8019ms
+2023-06-04 13:09:57.9809 Info Request starting HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 163
+2023-06-04 13:09:57.9809 Info Executing endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:09:57.9809 Info Route matched with {action = "CreateUserAccount", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateUserAccount(Entities.Dtos.RequestDto.UserDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:09:57.9809 Info Creating a new user with email: navee@example.com
+2023-06-04 13:09:57.9809 Error Failed to create user account due to conflict for email: navee@example.com
+2023-06-04 13:09:57.9809 Info Executed action SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication) in 1.7851ms
+2023-06-04 13:09:57.9809 Info Executed endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:09:57.9809 Error ConflictException occurred: User with Email or Phone already exists
+2023-06-04 13:09:57.9809 Info Request finished HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 163 - 409 - application/json 4.5427ms
+2023-06-04 13:09:57.9809 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 55
+2023-06-04 13:09:57.9809 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:09:57.9809 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:09:57.9809 Info Attempting login for email: navee@example.com
+2023-06-04 13:09:57.9809 Error Invalid user credentials,Given Password is incorrect
+2023-06-04 13:09:57.9809 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 1.0852ms
+2023-06-04 13:09:57.9809 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:09:57.9809 Error UnauthorizedException occurred: Given password is incorrect
+2023-06-04 13:09:57.9809 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 55 - 401 - application/json 3.1999ms
+2023-06-04 13:09:57.9973 Info Request starting HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 161
+2023-06-04 13:09:57.9973 Info Executing endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:09:57.9973 Info Route matched with {action = "CreateUserAccount", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateUserAccount(Entities.Dtos.RequestDto.UserDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:09:57.9973 Warn Model validation failed while creating user account
+2023-06-04 13:09:57.9973 Info Executed action SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication) in 1.1078ms
+2023-06-04 13:09:57.9973 Info Executed endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:09:58.0187 Error BadRequestException occurred: Invalid Date of Birth.
+2023-06-04 13:09:58.0187 Info Request finished HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 161 - 400 - application/json 21.5791ms
+2023-06-04 13:11:32.7513 Info User profile is available. Using 'C:\Users\NaveenaThangavel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-04 13:11:56.8468 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 54
+2023-06-04 13:11:56.8727 Warn Failed to determine the https port for redirect.
+2023-06-04 13:11:56.9439 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:11:56.9772 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:11:57.1678 Info Attempting login for email: test@example.com
+2023-06-04 13:11:57.4837 Error Invalid user credentials,Given Email :test@example.com is incorrect
+2023-06-04 13:11:59.7251 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 2743.1313ms
+2023-06-04 13:11:59.7309 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:12:04.1652 Error UnauthorizedException occurred: Given Email is incorrect
+2023-06-04 13:12:06.9960 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 54 - 401 - application/json 10155.4402ms
+2023-06-04 13:12:45.2315 Info User profile is available. Using 'C:\Users\NaveenaThangavel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-04 13:12:45.8934 Info Request starting HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 162
+2023-06-04 13:12:45.9080 Warn Failed to determine the https port for redirect.
+2023-06-04 13:12:45.9543 Info Executing endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:12:45.9724 Info Route matched with {action = "CreateUserAccount", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateUserAccount(Entities.Dtos.RequestDto.UserDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:12:46.1260 Info Creating a new user with email: test@example.com
+2023-06-04 13:12:46.2586 Info User created successfully with email: test@example.com
+2023-06-04 13:12:46.2608 Info Executing StatusCodeResult, setting HTTP status code 201
+2023-06-04 13:12:46.2608 Info Executed action SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication) in 289.5029ms
+2023-06-04 13:12:46.2608 Info Executed endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:12:46.2608 Info Request finished HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 162 - 201 - - 379.6342ms
+2023-06-04 13:12:46.2811 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 54
+2023-06-04 13:12:46.2811 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:12:46.2811 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:12:46.2811 Info Attempting login for email: test@example.com
+2023-06-04 13:12:46.3780 Info JWT token generated for user with email: test@example.com
+2023-06-04 13:12:46.3791 Info Login Sucessfull for the user : test@example.com
+2023-06-04 13:12:46.3791 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:12:46.4012 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 117.6639ms
+2023-06-04 13:12:46.4012 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:12:46.4012 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 54 - 200 - application/json;+charset=utf-8 120.4307ms
+2023-06-04 13:12:46.4191 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:12:46.4191 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:12:46.4191 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:12:46.4191 Info Attempting login for email: navee@example.com
+2023-06-04 13:12:46.4273 Info JWT token generated for user with email: navee@example.com
+2023-06-04 13:12:46.4273 Info Login Sucessfull for the user : navee@example.com
+2023-06-04 13:12:46.4273 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:12:46.4273 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 7.1064ms
+2023-06-04 13:12:46.4273 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:12:46.4273 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 200 - application/json;+charset=utf-8 9.0594ms
+2023-06-04 13:12:46.4273 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53
+2023-06-04 13:12:46.4273 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:12:46.4273 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:12:46.4340 Warn Model validation failed while logging in.
+2023-06-04 13:12:46.4340 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 3.467ms
+2023-06-04 13:12:46.4340 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:12:46.4340 Error BadRequestException occurred: Enter a valid email address
+2023-06-04 13:12:46.4340 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 53 - 400 - application/json 19.1238ms
+2023-06-04 13:12:46.4340 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49
+2023-06-04 13:12:46.4340 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:12:46.4340 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:12:46.4340 Info Attempting login for email: Abi@example.com
+2023-06-04 13:12:46.4340 Info JWT token generated for user with email: Abi@example.com
+2023-06-04 13:12:46.4340 Info Login Sucessfull for the user : Abi@example.com
+2023-06-04 13:12:46.4340 Info Executing OkObjectResult, writing value of type 'Entities.Dtos.ResponseDto.TokenDto'.
+2023-06-04 13:12:46.4340 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 0.7324ms
+2023-06-04 13:12:46.4340 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:12:46.4340 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 49 - 200 - application/json;+charset=utf-8 0.9820ms
+2023-06-04 13:12:46.4340 Info Request starting HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 163
+2023-06-04 13:12:46.4340 Info Executing endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:12:46.4340 Info Route matched with {action = "CreateUserAccount", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateUserAccount(Entities.Dtos.RequestDto.UserDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:12:46.4538 Info Creating a new user with email: navee@example.com
+2023-06-04 13:12:46.4538 Error Failed to create user account due to conflict for email: navee@example.com
+2023-06-04 13:12:46.4538 Info Executed action SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication) in 1.2758ms
+2023-06-04 13:12:46.4538 Info Executed endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:12:46.4538 Error ConflictException occurred: User with Email or Phone already exists
+2023-06-04 13:12:46.4538 Info Request finished HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 163 - 409 - application/json 3.2995ms
+2023-06-04 13:12:46.4538 Info Request starting HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 55
+2023-06-04 13:12:46.4538 Info Executing endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:12:46.4538 Info Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Entities.Dtos.RequestDto.LoginDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:12:46.4538 Info Attempting login for email: navee@example.com
+2023-06-04 13:12:46.4538 Error Invalid user credentials,Given Password is incorrect
+2023-06-04 13:12:46.4538 Info Executed action SecureApplication.Controllers.AccountController.Login (SecureApplication) in 1.0687ms
+2023-06-04 13:12:46.4538 Info Executed endpoint 'SecureApplication.Controllers.AccountController.Login (SecureApplication)'
+2023-06-04 13:12:46.4538 Error UnauthorizedException occurred: Given password is incorrect
+2023-06-04 13:12:46.4538 Info Request finished HTTP/1.1 POST http://localhost/api/user/login application/json;+charset=utf-8 55 - 401 - application/json 3.0338ms
+2023-06-04 13:12:46.4673 Info Request starting HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 161
+2023-06-04 13:12:46.4673 Info Executing endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:12:46.4673 Info Route matched with {action = "CreateUserAccount", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateUserAccount(Entities.Dtos.RequestDto.UserDto) on controller SecureApplication.Controllers.AccountController (SecureApplication).
+2023-06-04 13:12:46.4673 Warn Model validation failed while creating user account
+2023-06-04 13:12:46.4673 Info Executed action SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication) in 1.9619ms
+2023-06-04 13:12:46.4673 Info Executed endpoint 'SecureApplication.Controllers.AccountController.CreateUserAccount (SecureApplication)'
+2023-06-04 13:12:46.4890 Error BadRequestException occurred: Invalid Date of Birth.
+2023-06-04 13:12:46.4890 Info Request finished HTTP/1.1 POST http://localhost/api/user application/json;+charset=utf-8 161 - 400 - application/json 21.9330ms
